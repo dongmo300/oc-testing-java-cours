@@ -1,5 +1,6 @@
 package com.openclassrooms.testing;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.text.MessageFormat;
@@ -84,6 +85,7 @@ public class CalculatorTest {
 
 		// Assert -- ça vaut toujours zéro !
 		assertEquals(0, actualResult);
+		assertThat(actualResult).isEqualTo(0);
 	}
 
 	@ParameterizedTest(name = "{0} + {1} doit être égal à {2}")
